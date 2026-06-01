@@ -1,0 +1,9 @@
+// App shell styles — minimal, everything lives in components / global styles
+:host {
+  display: block;
+}
+
+main {
+  // offset for fixed navbar
+  margin-top: 0;
+}

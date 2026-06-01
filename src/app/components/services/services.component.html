@@ -1,0 +1,28 @@
+<section id="services">
+  <div class="container">
+    <div class="services-header" appReveal>
+      <div class="section-label section-label-center">What I Offer</div>
+      <h2 class="section-title">My <span class="highlight">Services</span></h2>
+      <p class="section-desc">
+        End-to-end development capabilities from backend APIs to polished frontend interfaces.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div
+        class="service-card"
+        *ngFor="let service of services; let i = index"
+        appReveal
+      >
+        <div class="service-icon">
+          <i [class]="service.icon"></i>
+        </div>
+        <h3 class="service-title">{{ service.title }}</h3>
+        <p class="service-desc">{{ service.description }}</p>
+        <div class="service-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+<section id="experience">
+  <div class="container">
+    <div appReveal>
+      <div class="section-label">Work Experience</div>
+      <h2 class="section-title">Where I've <span class="highlight">Worked</span></h2>
+      <p class="section-desc">Real-world engineering experience building production-grade applications.</p>
+    </div>
+
+    <div class="exp-wrapper" appReveal *ngIf="experience">
+      <div class="exp-card">
+        <!-- Accent bar -->
+        <div class="exp-accent-bar"></div>
+
+        <!-- Header -->
+        <div class="exp-header">
+          <div class="exp-left">
+            <div class="exp-company-logo">
+              <i class="fas fa-building"></i>
+            </div>
+            <div>
+              <div class="exp-role">{{ experience.role }}</div>
+              <div class="exp-company">{{ experience.company }}</div>
+            </div>
+          </div>
+          <div class="exp-period-wrap">
+            <span class="exp-period">
+              <i class="fas fa-calendar-alt"></i>
+              {{ experience.period }}
+            </span>
+            <span class="exp-badge"> Intern</span>
+          </div>
+        </div>
+
+        <!-- Bullets -->
+        <ul class="exp-bullets">
+          <li *ngFor="let bullet of experience.bullets">
+            <span class="bullet-arrow">▹</span>
+            {{ bullet }}
+          </li>
+        </ul>
+
+        <!-- Tags -->
+        <div class="exp-tags">
+          <span class="exp-tag" *ngFor="let tag of experience.tags">{{ tag }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

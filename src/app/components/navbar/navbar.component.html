@@ -1,0 +1,32 @@
+<nav [class.scrolled]="isScrolled">
+  <a class="nav-logo" (click)="scrollToTop()">
+    <div class="logo-icon">RS</div>
+    Ruben <span>Sunny</span>
+  </a>
+
+  <ul class="nav-links">
+    <li *ngFor="let link of navLinks">
+      <a
+        [class.active]="activeSection === link.id"
+        (click)="scrollTo(link.id)"
+      >{{ link.label }}</a>
+    </li>
+  </ul>
+
+  <a href="assets/resume.pdf" download class="nav-btn">
+    <i class="fas fa-download"></i> Resume
+  </a>
+
+  <div class="hamburger" [class.open]="isMobileOpen" (click)="toggleMobile()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" [class.open]="isMobileOpen">
+  <a *ngFor="let link of navLinks" (click)="scrollTo(link.id)">
+    {{ link.label }}
+  </a>
+</div>

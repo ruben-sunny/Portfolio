@@ -1,0 +1,46 @@
+<section id="skills">
+  <div class="container">
+    <div class="skills-header" appReveal>
+      <div class="section-label section-label-center">Technical Skills</div>
+      <h2 class="section-title">My <span class="highlight">Tech Stack</span></h2>
+      <p class="section-desc">
+        A comprehensive toolkit built through hands-on projects and real-world internship experience.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <div
+        class="skill-category"
+        *ngFor="let cat of categories; let i = index"
+        appReveal
+        [style.animation-delay]="i * 0.1 + 's'"
+      >
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon" [class]="cat.colorClass">
+            <i [class]="cat.iconClass"></i>
+          </div>
+          <div class="skill-cat-name">{{ cat.name }}</div>
+        </div>
+        <div class="skill-chips">
+          <span class="skill-chip" *ngFor="let skill of cat.skills">{{ skill }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proficiency bars -->
+    <div class="proficiency-section" appReveal>
+      <h3 class="prof-title">Key Proficiencies</h3>
+      <div class="prof-bars">
+        <div class="prof-item" *ngFor="let item of proficiencies">
+          <div class="prof-info">
+            <span class="prof-name">{{ item.name }}</span>
+            <span class="prof-pct">{{ item.pct }}%</span>
+          </div>
+          <div class="prof-track">
+            <div class="prof-fill" [style.width]="item.pct + '%'" [style.background]="item.color"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

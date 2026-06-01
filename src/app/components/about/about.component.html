@@ -1,0 +1,50 @@
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- LEFT: Info -->
+      <div appReveal>
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">
+          Passionate developer<br>
+          building <span class="highlight">real-world</span> solutions
+        </h2>
+        <p class="section-desc">
+          I'm a Computer Science graduate from Sri Venkateswara Engineering College,
+          currently working as a Software Developer Intern at <strong>Infosys</strong> on Java Full Stack
+          with Angular. I thrive on solving complex problems and crafting clean, efficient code.
+        </p>
+
+        <div class="about-tags">
+          <span class="about-tag" *ngFor="let tag of tags">
+            <i [class]="tag.icon"></i> {{ tag.label }}
+          </span>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card" *ngFor="let stat of stats">
+            <div class="stat-num">{{ stat.num }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Timeline -->
+      <div appReveal>
+        <div class="section-label">My Journey</div>
+        <div class="timeline">
+          <div
+            class="timeline-item"
+            *ngFor="let item of timeline"
+            [class.gold]="item.type === 'gold'"
+          >
+            <div class="timeline-date">{{ item.date }}</div>
+            <div class="timeline-title">{{ item.title }}</div>
+            <div class="timeline-desc">{{ item.description }}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

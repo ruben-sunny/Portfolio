@@ -1,0 +1,34 @@
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-mark">RS</div>
+        <span>Ruben <strong>Sunny</strong></span>
+      </div>
+      <p class="footer-tagline">Building real-world solutions with modern web technologies.</p>
+    </div>
+
+    <div class="footer-links">
+      <a *ngFor="let link of navLinks" (click)="scrollTo(link)">
+        {{ link | titlecase }}
+      </a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://github.com/ruben-sunny" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ruben-sunny-61801030b/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:rubensunny96@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">
+      © {{ year }} <span>Ruben Sunny</span>. All rights reserved.
+      Built with <i class="fab fa-angular" style="color:#dd0031"></i> Angular
+      & <i class="fas fa-heart" style="color:#f5c842"></i>
+    </p>
+    <button class="back-top" (click)="scrollToTop()" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</footer>

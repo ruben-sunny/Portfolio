@@ -1,0 +1,79 @@
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-content">
+    <!-- LEFT TEXT -->
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-title">
+        Hi, I'm<br>
+        <span class="name-highlight">Kongala Ruben Sunny</span>
+      </h1>
+
+      <p class="hero-subtitle">Full Stack Developer</p>
+
+      <p class="hero-desc">
+        Building responsive, scalable web applications using modern technologies.
+        Passionate about crafting real-world solutions with Java, Angular, and Spring Boot.
+      </p>
+
+      <div class="hero-ctas">
+        <button class="btn-primary" (click)="scrollTo('contact')">
+          <i class="fas fa-paper-plane"></i> Hire Me
+        </button>
+        <a href="assets/resume.pdf" download class="btn-secondary">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+
+      <!-- Quick info chips -->
+      <div class="hero-chips">
+        <span class="chip"><i class="fas fa-map-marker-alt"></i> Nellore, India</span>
+        <span class="chip"><i class="fas fa-briefcase"></i> Infosys Intern</span>
+        <span class="chip"><i class="fas fa-graduation-cap"></i> B.Tech CSE 2025</span>
+      </div>
+    </div>
+
+    <!-- RIGHT VISUAL -->
+    <div class="hero-visual">
+      <div class="hero-photo-frame">
+        <div class="hero-photo-bg"></div>
+        <div class="hero-photo-inner">
+          <div class="orbit-ring"></div>
+          <div class="avatar-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="avatar-name">Ruben Sunny</div>
+          <div class="avatar-role"> Full Stack Developer</div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="float-badge float-badge-1">
+          <i class="fab fa-java" style="color:#f89820"></i>
+          <span>Java · Spring Boot</span>
+        </div>
+        <div class="float-badge float-badge-2">
+          <i class="fab fa-angular" style="color:#dd0031"></i>
+          <span>Angular Expert</span>
+        </div>
+        <div class="float-badge float-badge-3">
+          <i class="fas fa-database" style="color:#00d4ff"></i>
+          <span>MySQL · REST API</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" (click)="scrollTo('about')">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+    <span>Scroll</span>
+  </div>
+</section>

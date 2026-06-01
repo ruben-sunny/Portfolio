@@ -1,0 +1,58 @@
+.tech-strip {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+  overflow: hidden;
+  position: relative;
+
+  /* Fade edges */
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  &::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--bg-secondary), transparent);
+  }
+  &::after {
+    right: 0;
+    background: linear-gradient(-90deg, var(--bg-secondary), transparent);
+  }
+}
+
+.tech-strip-inner {
+  display: flex;
+  gap: 3rem;
+  animation: marquee 22s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+
+  &:hover { animation-play-state: paused; }
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  transition: color 0.3s;
+  cursor: default;
+
+  i {
+    color: var(--accent-blue);
+    font-size: 0.95rem;
+  }
+
+  &:hover {
+    color: var(--accent-gold);
+    i { color: var(--accent-gold); }
+  }
+}
