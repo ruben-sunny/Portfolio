@@ -168,7 +168,7 @@ export class PortfolioService {
     return {
       role: 'Software Developer Intern',
       company: 'Infosys · Java Full Stack – Angular',
-      period: 'July 2025 – Present',
+      period: 'July 2025 – July 2026',
       bullets: [
         'Developed full-stack application features using Spring Boot (backend) and Angular (frontend).',
         'Built and integrated RESTful APIs with Angular components for seamless data flow.',
