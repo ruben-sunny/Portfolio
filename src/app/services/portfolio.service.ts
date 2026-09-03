@@ -131,7 +131,7 @@ export class PortfolioService {
         type: 'gold'
       },
       {
-        date: 'July 2025 – Present',
+        date: 'July 2025 – July 2026',
         title: 'Software Developer Intern — Infosys',
         description: 'Java Full Stack (Angular) — Building production-level full-stack enterprise applications.',
         type: 'gold'
